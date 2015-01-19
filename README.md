@@ -98,7 +98,7 @@ Python packages:
 + [Numpy](http://docs.scipy.org/doc/numpy/user/install.html) (likely already on your system)
 + [lxml](http://lxml.de)
 + [solpy](https://github.com/nrcharles/solpy) - python library to model solar system power performance similar to PVWatts or NREL's System Advisor Model(SAM)
-+[caelum](https://github.com/nrcharles/caelum) - python library wrapper for various typical historical weather sources
++ [caelum](https://github.com/nrcharles/caelum) - python library wrapper for various typical historical weather sources
 + Pickle
 
 Optional:
