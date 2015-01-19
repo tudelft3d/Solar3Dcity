@@ -3,6 +3,8 @@ Solar3Dcity
 
 A simple utility to estimate the solar potential of building roof surface(s) from a 3D city model stored in CityGML.
 
+![solar3dcity-header](http://3dgeoinfo.bk.tudelft.nl/biljecki/github/solar3dcity/ov-solar-nw-n-legend-logo-small.png)
+
 The scripts compute the solar irradiance data thanks to the [solpy](https://github.com/nrcharles/solpy) library.
 
 #### Please note that this is an experimental research software prototype under continuous development.
@@ -62,6 +64,8 @@ The magnitude of the three radiation components is different depending on the da
 ### Tilted and oriented surfaces
 
 The solar radiation differs depending on the tilt and orientation of a surface. The plot below show that TOF  (tilt-orientation-factors) for Delft in the Netherlands. It is visible that the difference between the irradiance on differently tilted and oriented surfaces is significant.
+
+![TOF-plot](http://3dgeoinfo.bk.tudelft.nl/biljecki/github/solar3dcity/TOF-plot.png)
 
 ### Summing it up
 
@@ -230,7 +234,7 @@ python dailyplot.py
 
 You will get something like this:
 
-![Daily-plot](http://3dgeoinfo.bk.tudelft.nl/biljecki/code/img/solar-dailyplot.png)
+![Daily-plot](http://3dgeoinfo.bk.tudelft.nl/biljecki/github/solar3dcity/solar-dailyplot.png)
 
 This is the magnitude of the radiation during the day. Solar3Dcity integrates these values over the year in order to estimate the yearly irradiance.
 
@@ -270,7 +274,9 @@ The results of the computations are added directly to the `<gml:Polygon>` and `<
 Visualisation possibilities
 ---------------------
 
-This utility stores the data of the solar estimations directly in the CityGML file. However, data can be visualised by converting this to an enhanced OBJ with my utility [CityGML2OBJs](https://github.com/tudelft3d/CityGML2OBJs). An example is shown in the beginning of this file.
+This utility stores the data of the solar estimations directly in the CityGML file. However, data can be visualised by converting this to an enhanced OBJ with my utility [CityGML2OBJs](https://github.com/tudelft3d/CityGML2OBJs). An example is shown in the beginning of this file and here below.
+
+![Daily-plot](http://3dgeoinfo.bk.tudelft.nl/biljecki/github/solar3dcity/zoom-solar-nw-legend-small.png)
 
 
 Contact me for questions and feedback
