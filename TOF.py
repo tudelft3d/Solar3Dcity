@@ -148,7 +148,7 @@ if PLOT:
 
     xi = np.linspace(90, 270, 180)
     yi = np.linspace(0, 90, 90)
-    zi = ml.griddata(irrTOFa, irrTOFt, irrTOFi, xi, yi, interp='nn')#nn
+    zi = ml.griddata(irrTOFa, irrTOFt, irrTOFi, xi, yi, interp='nn') # linear interpolation does not work, so natural neighbour is used
 
     vmin = 600.0
     vmax = 1250.0

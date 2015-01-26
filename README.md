@@ -65,7 +65,7 @@ The magnitude of the three radiation components is different depending on the da
 
 The solar radiation differs depending on the tilt and orientation of a surface. The plot below show that TOF  (tilt-orientation-factors) for Delft in the Netherlands. It is visible that the difference between the irradiation on differently tilted and oriented surfaces is significant.
 
-![TOF-plot](http://3dgeoinfo.bk.tudelft.nl/biljecki/github/solar3dcity/TOF-plot.png)
+![TOF-plot](http://3dgeoinfo.bk.tudelft.nl/biljecki/github/solar3dcity/TOF-plot_new.png)
 
 ### Summing it up
 
@@ -234,7 +234,7 @@ python dailyplot.py
 
 You will get something like this:
 
-![Daily-plot](http://3dgeoinfo.bk.tudelft.nl/biljecki/github/solar3dcity/solar-dailyplot.png)
+![Daily-plot](http://3dgeoinfo.bk.tudelft.nl/biljecki/github/solar3dcity/solar-dailyplot_new.png)
 
 This is the magnitude of the irradiation during the day. Solar3Dcity integrates these values over the year in order to estimate the yearly irradiation.
 
