@@ -5,14 +5,14 @@ A simple utility to estimate the solar potential of building roof surface(s) fro
 
 ![solar3dcity-header](http://3dgeoinfo.bk.tudelft.nl/biljecki/github/solar3dcity/ov-solar-nw-n-legend-logo-small.png)
 
-The scripts compute the solar irradiance data thanks to the [solpy](https://github.com/nrcharles/solpy) library.
+The scripts compute the solar irradiation data thanks to the [solpy](https://github.com/nrcharles/solpy) library.
 
 #### Please note that this is an experimental research software prototype under continuous development.
 
 Introduction
 ---------------------
 
-The estimation of the solar irradiance of roof surfaces is one of the prominent use-cases of 3D city models. This use-case is important for estimating the feasibility of installing a photovoltaic panel on a roof. Such estimations are usually done on a large-scale, e.g. on the area of a municipality. For instance, see [an example](http://www.sun-area.net/index.php?id=103) in Germany. Further, there are many academic articles that explore this topic.
+The estimation of the solar irradiation of roof surfaces is one of the prominent use-cases of 3D city models. This use-case is important for estimating the feasibility of installing a photovoltaic panel on a roof. Such estimations are usually done on a large-scale, e.g. on the area of a municipality. For instance, see [an example](http://www.sun-area.net/index.php?id=103) in Germany. Further, there are many academic articles that explore this topic.
 
 Despite the popularity of this 3D use-case, there are two drawbacks:
 
@@ -36,12 +36,12 @@ Further, I will be very happy to hear if you find this tool useful for your work
 Coming soon. Journal paper under submission.
 
 
-Estimating the solar irradiance: a quick introduction
+Estimating the solar irradiation: a quick introduction
 ---------------------
 
-This short section gives an overview of the estimation of the solar irradiance, for understanding how the utility works.
+This short section gives an overview of the estimation of the solar irradiation, for understanding how the utility works.
 
-The solar irradiance is the amount of solar energy received over a given time (e.g. one year) on an area (e.g. one metre squared). Contemporary solar panels are able to utilise 10-15% of this energy and convert it to electric energy.
+The solar irradiation is the amount of solar energy received over a given time (e.g. one year) on an area (e.g. one metre squared). Contemporary solar panels are able to utilise 10-15% of this energy and convert it to electric energy.
 
 ### The three components of solar radiation
 
@@ -57,26 +57,26 @@ The global solar radiation is the sum of these three components.
 
 Clouds have a significant influence on the radiation. Therefore it is important to know the weather conditions on a location in order to account the estimation. For this, historic data is usually used.
 
-### The yearly irradiance on a surface
+### The yearly irradiation on a surface
 
-The magnitude of the three radiation components is different depending on the day and time (i.e. position of the sun). Hence, the yearly irradiance is computed by integrating the magnitudes over the year, i.e. estimating the irradiance for many epochs during the year and summing them up (e.g. every 1 hour for every day).
+The magnitude of the three radiation components is different depending on the day and time (i.e. position of the sun). Hence, the yearly irradiation is computed by integrating the magnitudes over the year, i.e. estimating the irradiation for many epochs during the year and summing them up (e.g. every 1 hour for every day).
 
 ### Tilted and oriented surfaces
 
-The solar radiation differs depending on the tilt and orientation of a surface. The plot below show that TOF  (tilt-orientation-factors) for Delft in the Netherlands. It is visible that the difference between the irradiance on differently tilted and oriented surfaces is significant.
+The solar radiation differs depending on the tilt and orientation of a surface. The plot below show that TOF  (tilt-orientation-factors) for Delft in the Netherlands. It is visible that the difference between the irradiation on differently tilted and oriented surfaces is significant.
 
 ![TOF-plot](http://3dgeoinfo.bk.tudelft.nl/biljecki/github/solar3dcity/TOF-plot.png)
 
 ### Summing it up
 
-The global solar irradiance on a tilted and oriented surface at location can be estimated from the following components of the surface:
+The global solar irradiation on a tilted and oriented surface at location can be estimated from the following components of the surface:
 
 + location
 + tilt (of the normal)
 + orientation (azimuth)
 + historical weather (cloud) data
 
-The annual irradiance is expressed in kWh/m^2. If the area of the surface is available, the normalised irradiance is multiplied with the surface area in order to obtain the irradiance in kWh.
+The annual irradiation is expressed in kWh/m^2. If the area of the surface is available, the normalised irradiation is multiplied with the surface area in order to obtain the irradiation in kWh.
 
 
 ### The role of 3D city models
@@ -128,7 +128,7 @@ The utility does the following:
 
 + reads the CityGML file and extracts the roof surfaces for each building 
 + computes the tilt, area, and orientation for each roof surface
-+ estimates the yearly solar irradiance thanks to the [solpy](https://github.com/nrcharles/solpy) library and EPW weather data (thanks to the [caelum](https://github.com/nrcharles/caelum) library)
++ estimates the yearly solar irradiation thanks to the [solpy](https://github.com/nrcharles/solpy) library and EPW weather data (thanks to the [caelum](https://github.com/nrcharles/caelum) library)
 + writes the data back in the CityGML file
 
 It is important to note the following:
@@ -156,7 +156,7 @@ Without these changes, the code will give wrong estimates. I plan to automate th
 ### (Optional:) Compute the TOFs to optimise the estimations
 
 
-In case you have a large dataset (>1000 buildings), it is advised that first you compute the tilt-orientation factors. Then the software samples and interpolates the value of the yearly irradiance directly from this precomputed dataset. This is done with the `TOF.py` script.
+In case you have a large dataset (>1000 buildings), it is advised that first you compute the tilt-orientation factors. Then the software samples and interpolates the value of the yearly irradiation directly from this precomputed dataset. This is done with the `TOF.py` script.
 
 ```
 python TOF.py -lat 52.01 -lon 4.36 -s 5
@@ -174,7 +174,7 @@ Here are some examples of how much time it takes my computer to precompute the T
 | 2          	| 2 h 41 min 	|
 | 1          	| 11 h       	|
 
-The TOF will be saved as a file `TOF.dict` in the same directory. The code will then sample the irradiance directly from the precomputed values, saving you a lot of time.
+The TOF will be saved as a file `TOF.dict` in the same directory. The code will then sample the irradiation directly from the precomputed values, saving you a lot of time.
 
 If you toggle the `-p` option at the end you will get the plot as the one above.
 
@@ -190,7 +190,7 @@ python TOF.py -lat 52.01 -lon 4.36 -s 15 -p True -f TOF.dict
 
 The Perez et al. (1990) empirical model is used for the estimations.
 
-### The main part: Estimate the solar irradiance of CityGML buildings
+### The main part: Estimate the solar irradiation of CityGML buildings
 
 Put your CityGML file(s) in a separate directory. If you have precomputed the TOFs, run this:
 
@@ -199,7 +199,7 @@ Put your CityGML file(s) in a separate directory. If you have precomputed the TO
 python Solar3Dcity.py -i /path/to/CityGML/files/ -o /path/to/new/CityGML/files/ -f /path/to/the/TOF.dict
 ```
 
-The tool will run the analysis on all `*.gml` it finds in that folder. The new files with the information on the solar irradiance of the building and its roof surface(s) will have the extension `-solar.gml`. That's it.
+The tool will run the analysis on all `*.gml` it finds in that folder. The new files with the information on the solar irradiation of the building and its roof surface(s) will have the extension `-solar.gml`. That's it.
 
 If you have not precomputed the TOFs, run this instead:
 
@@ -224,7 +224,7 @@ Hence, if you have a large dataset, you might want to precompute the tilt-orient
 
 ### Extra: plot the daily clear-sky radiation
 
-This is not really a part of the utility, but might be helpful to understand how the estimation of the solar irradiance works. The script `dailyplot.py` plots the global solar radiation on a tilted and oriented surface at a location on a specific date. Multiple locations, multiple surfaces, and multiple dates are possible in order to compare the settings.
+This is not really a part of the utility, but might be helpful to understand how the estimation of the solar irradiation works. The script `dailyplot.py` plots the global solar irradiance on a tilted and oriented surface at a location on a specific date. Multiple locations, multiple surfaces, and multiple dates are possible in order to compare the settings.
 
 Go through the code to adjust the settings and then simply run:
 
@@ -236,7 +236,7 @@ You will get something like this:
 
 ![Daily-plot](http://3dgeoinfo.bk.tudelft.nl/biljecki/github/solar3dcity/solar-dailyplot.png)
 
-This is the magnitude of the radiation during the day. Solar3Dcity integrates these values over the year in order to estimate the yearly irradiance.
+This is the magnitude of the irradiation during the day. Solar3Dcity integrates these values over the year in order to estimate the yearly irradiation.
 
 
 

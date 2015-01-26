@@ -34,7 +34,7 @@ import argparse
 import numpy as np
 
 #-- Parse command-line arguments
-PARSER = argparse.ArgumentParser(description='Estimate the tilt and orientation factor (TOF) for the yearly irradiance.')
+PARSER = argparse.ArgumentParser(description='Estimate the tilt and orientation factor (TOF) for the yearly irradiation.')
 PARSER.add_argument('-lat', '--latitude',
 	help='latitude of the place', required=False)
 PARSER.add_argument('-lon', '--longitude',
@@ -108,12 +108,12 @@ else:
 
         #-- For each tilt
         for tr in tilts:
-        	#-- Get the total yearly solar irradiance
+        	#-- Get the total yearly solar irradiation
             total = irr.yearly_total_irr(PLACE, az, tr)#, INTERVAL, cloud_cover)
             #-- Store it in the dictionary
             TOF[str(az)][str(tr)] = total
             #-- Print the progress
-            print "Azimuth:", az, "\tTilt:", tr, "\tIrradiance:", total, "kWh/m^2"
+            print "Azimuth:", az, "\tTilt:", tr, "\tIrradiation:", total, "kWh/m^2"
 
     #-- Store the obtained values to save time later
     if TOF:
@@ -159,16 +159,16 @@ if PLOT:
     CS = plt.contour(xi, yi, zi, 25, origin=origin, linewidths=.5, colors='k')
     plt.axes().set_aspect('equal') # ,'datalim'
     plt.xticks(np.arange(90.0, 270.01, 10.0))
-    plt.clabel(CS, inline=1, fontsize=7, colors='k')
+    plt.clabel(CS, inline=1, fontsize=7, colors='k', fmt='%1.0f') #CS.levels[::2],
     plt.xlim(90, 270)
     plt.ylim(0, 90)
 
-    ttl = r"Global solar irradiance on a tilted and oriented surface"
+    ttl = r"Global solar irradiation on a tilted and oriented surface"
     ttl += "\n"
     ttl += r"in Delft, the Netherlands (N52.01$^{\circ}$, E4.36$^{\circ}$)"
     xl = r"Azimuth [$^{\circ}$]"
     yl = r"Tilt [$^{\circ}$]"
-    cbtl = r"Yearly irradiance [kWh/m$^{2}$]"
+    cbtl = r"Yearly irradiation [kWh/m$^{2}$/year]"
     plt.title(ttl, fontsize=12)
     plt.xlabel(xl, fontsize=11)
     plt.ylabel(yl, fontsize=11)
@@ -186,21 +186,21 @@ if PLOT:
     plt.savefig('TOF-plot.pdf', bbox_inches='tight')
     plt.show()
 
-    #-- Second figure (with 0-360 azimuths)
-    plt.figure(2)
+    # #-- Second figure (with 0-360 azimuths)
+    # plt.figure(2)
 
-    xi = np.linspace(0, 360, 360)
-    yi = np.linspace(0, 90, 90)
-    zi = ml.griddata(irrTOFa, irrTOFt, irrTOFi, xi, yi)
+    # xi = np.linspace(0, 360, 360)
+    # yi = np.linspace(0, 90, 90)
+    # zi = ml.griddata(irrTOFa, irrTOFt, irrTOFi, xi, yi)
 
-    CS = plt.contour(xi, yi, zi, 20)#, 15, linewidths = 0.5, colors = 'k')
-    plt.axes().set_aspect('equal') # ,'datalim'
-    plt.xticks(np.arange(0, 360, 25.0))
-    plt.clabel(CS, inline=3, fontsize=10)
-    plt.xlim(0, 360)
-    plt.ylim(0, 90)
-    plt.title(ttl, fontsize=14)
-    plt.xlabel(xl, fontsize=12)
-    plt.ylabel(yl, fontsize=12)
-    plt.savefig('TOF-plot-360.pdf', bbox_inches='tight')
-    plt.show()
+    # CS = plt.contour(xi, yi, zi, 20)#, 15, linewidths = 0.5, colors = 'k')
+    # plt.axes().set_aspect('equal') # ,'datalim'
+    # plt.xticks(np.arange(0, 360, 25.0))
+    # plt.clabel(CS, inline=3, fontsize=10, fmt='%1.0f')
+    # plt.xlim(0, 360)
+    # plt.ylim(0, 90)
+    # plt.title(ttl, fontsize=14)
+    # plt.xlabel(xl, fontsize=12)
+    # plt.ylabel(yl, fontsize=12)
+    # plt.savefig('TOF-plot-360.pdf', bbox_inches='tight')
+    # plt.show()

@@ -29,8 +29,8 @@
 # THE SOFTWARE.
 
 from solpy import irradiation
-# from caelum import eree
-import eree
+from caelum import eere
+# import eree
 import datetime
 
 def yearly_total_irr(place, az, tr): #, interval=30, ccd=None
@@ -97,7 +97,7 @@ def yearly_total_irr(place, az, tr): #, interval=30, ccd=None
     #-- EPW Weather data
     STATION_CODE = '062400' # '062400' for Amsterdam
     #-- Fetch the dataset thanks to the caelum library
-    records = eree.EPWdata(STATION_CODE)
+    records = eere.EPWdata(STATION_CODE)
     #-- Get the global yearly irradiance (Wh/m^2/year)
     TOTAL = sum([irradiation.irradiation(record=rec, place=place, horizon=None, t=tr, array_azimuth=az, model='p9') for rec in records])     
     #-- Divide it by 1000 to get the value in kWh/m^2/year

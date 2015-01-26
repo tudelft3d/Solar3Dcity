@@ -163,10 +163,10 @@ H_2 = plt.plot(timestamp, total_ir_h, 'k-')
 ddd = scipy.zeros(len(total_ir_h))
 #plt.fill_between(timestamp, total_ir_h, where=total_ir_h>=ddd, interpolate=True, color='k')
 
-plt.title('Clear-sky global solar radiation for Delft, the Netherlands', size=15)
+plt.title('Clear-sky global solar irradiance for Delft, the Netherlands', size=15)
 plt.xlabel('Time (UTC)', size=14)
 #plt.ylabel(u'Total solar irradiation (W/m²)', size=14)#$^{2}$
-plt.ylabel(r'Global solar radiation (W/m$^{2}$)', size=14)#
+plt.ylabel(r'Global solar irradiance (W/m$^{2}$)', size=14)#
 plt.legend(['A on 1 Mar', 'B on 1 Mar', 'H on 1 Mar', 'A on 21 Jun', 'B on 21 Jun', 'H on 21 Jun']), #[A_1, B_1, H_1], 
 plt.savefig('dailyplot.pdf')
 plt.show()
