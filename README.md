@@ -3,7 +3,7 @@ Solar3Dcity
 
 A simple utility to estimate the solar potential of building roof surface(s) from a 3D city model stored in CityGML.
 
-![solar3dcity-header](http://3dgeoinfo.bk.tudelft.nl/biljecki/github/solar3dcity/ov-solar-nw-n-legend-logo-small.png)
+![solar3dcity-header](http://3dgeoinfo.bk.tudelft.nl/biljecki/github/solar3dcity/ov-solar-n-legend-logo-small.png)
 
 The scripts compute the solar irradiation data thanks to the [solpy](https://github.com/nrcharles/solpy) library.
 
@@ -274,9 +274,9 @@ The results of the computations are added directly to the `<gml:Polygon>` and `<
 Visualisation possibilities
 ---------------------
 
-This utility stores the data of the solar estimations directly in the CityGML file. However, data can be visualised by converting this to an enhanced OBJ with my utility [CityGML2OBJs](https://github.com/tudelft3d/CityGML2OBJs). An example is shown in the beginning of this file and here below.
+This utility just stores the data of the solar estimations directly in the CityGML file. It does not have any GUI. However, data can be visualised by converting this to an enhanced OBJ with my utility [CityGML2OBJs](https://github.com/tudelft3d/CityGML2OBJs). An example is shown in the beginning of this file and here below.
 
-![Daily-plot](http://3dgeoinfo.bk.tudelft.nl/biljecki/github/solar3dcity/zoom-solar-nw-legend-small.png)
+![Zoom-solar](http://3dgeoinfo.bk.tudelft.nl/biljecki/github/solar3dcity/zoom-solar-nw-n-white-legend-small.png)
 
 
 Contact me for questions and feedback
