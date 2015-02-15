@@ -278,7 +278,7 @@ This utility just stores the data of the solar estimations directly in the CityG
 
 ![Zoom-solar](http://3dgeoinfo.bk.tudelft.nl/biljecki/github/solar3dcity/zoom-solar-nw-n-white-legend-small.png)
 
-Check also the [animation](https://vimeo.com/user20388455).
+Check also the [animation](https://vimeo.com/119679847).
 
 
 Contact me for questions and feedback
