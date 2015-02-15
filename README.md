@@ -67,6 +67,11 @@ The solar radiation differs depending on the tilt and orientation of a surface. 
 
 ![TOF-plot](http://3dgeoinfo.bk.tudelft.nl/biljecki/github/solar3dcity/TOF-plot_new.png)
 
+You can use Solar3Dcity to compute the optimal tilt for almost every location on Earth:
+
+![TOF-plotNairobi](http://3dgeoinfo.bk.tudelft.nl/biljecki/github/solar3dcity/TOF-nairobi_small.png)
+
+
 ### Summing it up
 
 The global solar irradiation on a tilted and oriented surface at location can be estimated from the following components of the surface:
