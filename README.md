@@ -278,6 +278,9 @@ This utility just stores the data of the solar estimations directly in the CityG
 
 ![Zoom-solar](http://3dgeoinfo.bk.tudelft.nl/biljecki/github/solar3dcity/zoom-solar-nw-n-white-legend-small.png)
 
+<iframe src="//player.vimeo.com/video/119679847" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="https://vimeo.com/119679847">Solar3Dcity - estimating the solar irradiation from CityGML buildings</a> from <a href="https://vimeo.com/user20388455">Filip B</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+
 
 Contact me for questions and feedback
 ---------------------
