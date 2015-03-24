@@ -109,6 +109,7 @@ Python packages:
 Optional:
 
 + matplotlib
++ LaTeX
 
 
 ### OS and Python version
@@ -153,7 +154,6 @@ There are some parametres that need to be modified prior to running the code.
 
 1. Open the `irr.py`, scroll to the end, and for the variable `STATION_CODE` put the code of the nearest weather station to your location. This can be found [here](http://apps1.eere.energy.gov/buildings/energyplus/weatherdata_about.cfm).
 2. In `Solar3Dcity.py` go to line 196 and manually change the latitude and longitude of the area.
-3. In `eree.py` go to line 19 and change the time zone.
 
 Without these changes, the code will give wrong estimates. I plan to automate this in future work.
 
@@ -167,7 +167,7 @@ In case you have a large dataset (>1000 buildings), it is advised that first you
 python TOF.py -lat 52.01 -lon 4.36 -s 5
 ```
 
-where -lat and -long are the latitude and the longitude of the location of your models (it is not extracted from them), and -s the *resolution* of the computations in degrees. The smaller the value, the better the estimation. If you have time put this to 1, if not put to 10.
+where -lat and -long are the latitude and the longitude of the location of your models (it is not extracted from them), and -s the *resolution* of the computations in degrees. The smaller the value, the better the estimation. If you have time put this to 1, if not put to 10 or 15.
 
 Here are some examples of how much time it takes my computer to precompute the TOFs depending on the resolution:
 
@@ -181,7 +181,7 @@ Here are some examples of how much time it takes my computer to precompute the T
 
 The TOF will be saved as a file `TOF.dict` in the same directory. The code will then sample the irradiation directly from the precomputed values, saving you a lot of time.
 
-If you toggle the `-p` option at the end you will get the plot as the one above.
+If you toggle the `-p` option at the end you will get the plot as the one above. (Please note that the plot above has been computed with the option of -s 1, i.e. a very high resolution, so if you use a coarser resolution you will not get a very nice plot.)
 
 ```
 python TOF.py -lat 52.01 -lon 4.36 -s 15 -p True

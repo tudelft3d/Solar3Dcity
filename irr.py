@@ -99,7 +99,7 @@ def yearly_total_irr(place, az, tr): #, interval=30, ccd=None
     #-- Fetch the dataset thanks to the caelum library
     records = eere.EPWdata(STATION_CODE)
     #-- Get the global yearly irradiance (Wh/m^2/year)
-    TOTAL = sum([irradiation.irradiation(record=rec, place=place, horizon=None, t=tr, array_azimuth=az, model='p9') for rec in records])     
+    TOTAL = sum([irradiation.irradiation(record=rec, location=place, horizon=None, t=tr, array_azimuth=az, model='p9') for rec in records])     
     #-- Divide it by 1000 to get the value in kWh/m^2/year
     yearly_sum = TOTAL/1000.
 
