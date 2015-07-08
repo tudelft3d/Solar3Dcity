@@ -153,12 +153,16 @@ if PLOT:
     vmin = 600.0
     vmax = 1250.0
 
+    import seaborn as sns
+    sns.set(style="white", font='serif', rc={'axes.facecolor': '#FFFFFF', 'grid.linestyle': '', 'axes.grid' : False, 'font.family': ['serif'], 'legend.frameon': True})
+
     origin = 'lower'
     cmap = plt.cm.get_cmap("afmhot")# Blues
     CSF = plt.contourf(xi, yi, zi, 25, cmap=cmap, origin=origin, vmin=vmin, vmax=vmax)#, 15, linewidths = 0.5, colors = 'k')
     CS = plt.contour(xi, yi, zi, 25, origin=origin, linewidths=.5, colors='k')
     plt.axes().set_aspect('equal') # ,'datalim'
     plt.xticks(np.arange(90.0, 270.01, 10.0))
+    plt.tick_params(axis='both', which='major', labelsize=9)
     plt.clabel(CS, inline=1, fontsize=7, colors='k', fmt='%1.0f') #CS.levels[::2],
     plt.xlim(90, 270)
     plt.ylim(0, 90)

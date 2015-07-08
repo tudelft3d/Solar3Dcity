@@ -1,9 +1,9 @@
 Solar3Dcity
 ===========
 
-A simple utility to estimate the solar potential of building roof surface(s) from a 3D city model stored in CityGML.
+A simple experimental utility to estimate the solar potential of building roof surface(s) from a 3D city model stored in CityGML.
 
-![solar3dcity-header](http://3dgeoinfo.bk.tudelft.nl/biljecki/github/solar3dcity/ov-solar-n-legend-logo-small.png)
+![solar3dcity-header](http://3d.bk.tudelft.nl/biljecki/github/solar3dcity/ov-solar-n-legend-logo-small.png)
 
 The scripts compute the solar irradiation data thanks to the [solpy](https://github.com/nrcharles/solpy) library.
 
@@ -19,21 +19,18 @@ Despite the popularity of this 3D use-case, there are two drawbacks:
 + the software packages are not available for free, and
 + utilities that support data stored in [CityGML](http://en.wikipedia.org/wiki/CityGML) are seldom.
 
-I have created this utility to fill this gap. This experimental software prototype was developed as a part of my [PhD research](http://3dgeoinfo.bk.tudelft.nl/biljecki/phd.html).
+I have created this utility to fill this gap. This experimental software prototype was developed as a part of my [PhD research](http://3d.bk.tudelft.nl/biljecki/phd.html).
 
 
 Conditions for use
 ---------------------
 
 
-This software is free to use. However, you are kindly requested to acknowledge the use of this software by citing it in a research paper you are writing, reports, and/or other applicable materials; and mentioning the [3D Geoinformation group at the Delft University of Technology](http://3dgeoinfo.bk.tudelft.nl/). A research paper is under submission, hence please contact me to give you a reference to cite.
+This software is free to use. However, you are kindly requested to acknowledge its use by citing it in a research paper you are writing, reports, and/or other applicable materials; and mentioning the [3D Geoinformation group at the Delft University of Technology](http://3d.bk.tudelft.nl/). If you used it for making a nice publication, then you are kindly requested to refer to this paper:
+
+Biljecki, F., Heuvelink, G. B. M., Ledoux, H., & Stoter, J. (2015). Propagation of positional error in 3D GIS to the estimation of the solar irradiation of building roofs. International Journal of Geographical Information Science, In press.
 
 Further, I will be very happy to hear if you find this tool useful for your workflow. If you find it useful and/or have suggestions for its improvement, please let me know. Further, I am maintaining a list of users that I notify of corrections and updates.
-
-
-### Academic reference with a detailed methodology
-
-Coming soon. Journal paper under submission.
 
 
 Estimating the solar irradiation: a quick introduction
@@ -65,11 +62,11 @@ The magnitude of the three radiation components is different depending on the da
 
 The solar radiation differs depending on the tilt and orientation of a surface. The plot below show that TOF  (tilt-orientation-factors) for Delft in the Netherlands. It is visible that the difference between the irradiation on differently tilted and oriented surfaces is significant.
 
-![TOF-plot](http://3dgeoinfo.bk.tudelft.nl/biljecki/github/solar3dcity/TOF-plot_new.png)
+![TOF-plot](http://3d.bk.tudelft.nl/biljecki/github/solar3dcity/TOF-plot_new.png)
 
 You can use Solar3Dcity to compute the optimal tilt for almost every location on Earth:
 
-![TOF-plotNairobi](http://3dgeoinfo.bk.tudelft.nl/biljecki/github/solar3dcity/TOF-nairobi_small.png)
+![TOF-plotNairobi](http://3d.bk.tudelft.nl/biljecki/github/solar3dcity/TOF-nairobi_small.png)
 
 
 ### Summing it up
@@ -106,9 +103,10 @@ Python packages:
 + [caelum](https://github.com/nrcharles/caelum) - python library wrapper for various typical historical weather sources
 + Pickle
 
-Optional:
+Optional (for plotting):
 
 + matplotlib
++ seaborn
 + LaTeX
 
 
@@ -239,7 +237,7 @@ python dailyplot.py
 
 You will get something like this:
 
-![Daily-plot](http://3dgeoinfo.bk.tudelft.nl/biljecki/github/solar3dcity/solar-dailyplot_new.png)
+![Daily-plot](http://3d.bk.tudelft.nl/biljecki/github/solar3dcity/solar-dailyplot_new.png)
 
 This is the magnitude of the irradiation during the day. Solar3Dcity integrates these values over the year in order to estimate the yearly irradiation.
 
@@ -281,7 +279,7 @@ Visualisation possibilities
 
 This utility just stores the data of the solar estimations directly in the CityGML file. It does not have any GUI. However, data can be visualised by converting this to an enhanced OBJ with my utility [CityGML2OBJs](https://github.com/tudelft3d/CityGML2OBJs). An example is shown in the beginning of this file and here below.
 
-![Zoom-solar](http://3dgeoinfo.bk.tudelft.nl/biljecki/github/solar3dcity/zoom-solar-nw-n-white-legend-small.png)
+![Zoom-solar](http://3d.bk.tudelft.nl/biljecki/github/solar3dcity/zoom-solar-nw-n-white-legend-small.png)
 
 Check also the [animation](https://vimeo.com/119679847).
 
@@ -290,7 +288,7 @@ Contact me for questions and feedback
 ---------------------
 Filip Biljecki
 
-[3D Geoinformation Research Group](http://3dgeoinfo.bk.tudelft.nl/)
+[3D Geoinformation Research Group](http://3d.bk.tudelft.nl/)
 
 Faculty of Architecture and the Built Environment
 
@@ -298,7 +296,7 @@ Delft University of Technology
 
 email: fbiljecki at gmail dot com
 
-[Personal webpage](http://3dgeoinfo.bk.tudelft.nl/biljecki/)
+[Personal webpage](http://filipbiljecki.com)
 
 
 Acknowledgments
