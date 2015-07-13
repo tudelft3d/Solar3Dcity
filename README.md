@@ -30,6 +30,16 @@ This software is free to use. However, you are kindly requested to acknowledge i
 
 Biljecki, F., Heuvelink, G. B. M., Ledoux, H., & Stoter, J. (2015). Propagation of positional error in 3D GIS to the estimation of the solar irradiation of building roofs. International Journal of Geographical Information Science, In press.
 
+```bib
+@article{Biljecki:2015iw,
+author = {Biljecki, Filip and Heuvelink, Gerard B M and Ledoux, Hugo and Stoter, Jantien},
+title = {{Propagation of positional error in 3D GIS to the estimation of the solar irradiation of building roofs}},
+journal = {International Journal of Geographical Information Science},
+year = {2015}
+}
+```
+
+
 Further, I will be very happy to hear if you find this tool useful for your workflow. If you find it useful and/or have suggestions for its improvement, please let me know. Further, I am maintaining a list of users that I notify of corrections and updates.
 
 

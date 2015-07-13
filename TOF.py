@@ -34,7 +34,7 @@ import argparse
 import numpy as np
 
 #-- Parse command-line arguments
-PARSER = argparse.ArgumentParser(description='Estimate the tilt and orientation factor (TOF) for the yearly irradiation.')
+PARSER = argparse.ArgumentParser(description='Estimate the tilt and orientation factor (TOF) for the annual insolation.')
 PARSER.add_argument('-lat', '--latitude',
 	help='latitude of the place', required=False)
 PARSER.add_argument('-lon', '--longitude',
@@ -172,7 +172,7 @@ if PLOT:
     ttl += r"in Delft, the Netherlands (N52.01$^{\circ}$, E4.36$^{\circ}$)"
     xl = r"Azimuth [$^{\circ}$]"
     yl = r"Tilt [$^{\circ}$]"
-    cbtl = r"Yearly irradiation [kWh/m$^{2}$/year]"
+    cbtl = r"Annual solar irradiation [kWh/m$^{2}$/yr]"
     plt.title(ttl, fontsize=12)
     plt.xlabel(xl, fontsize=11)
     plt.ylabel(yl, fontsize=11)
