@@ -28,14 +28,15 @@ Conditions for use
 
 This software is free to use. However, you are kindly requested to acknowledge its use by citing it in a research paper you are writing, reports, and/or other applicable materials; and mentioning the [3D Geoinformation group at the Delft University of Technology](http://3d.bk.tudelft.nl/). If you used it for making a nice publication, then you are kindly requested to refer to this paper:
 
-Biljecki, F., Heuvelink, G. B. M., Ledoux, H., & Stoter, J. (2015). Propagation of positional error in 3D GIS to the estimation of the solar irradiation of building roofs. International Journal of Geographical Information Science, In press.
+Biljecki, F., Heuvelink, G. B. M., Ledoux, H., & Stoter, J. (2015). Propagation of positional error in 3D GIS: estimation of the solar irradiation of building roofs. International Journal of Geographical Information Science. DOI: http://doi.org/10.1080/13658816.2015.1073292
 
 ```bib
 @article{Biljecki:2015iw,
 author = {Biljecki, Filip and Heuvelink, Gerard B M and Ledoux, Hugo and Stoter, Jantien},
-title = {{Propagation of positional error in 3D GIS to the estimation of the solar irradiation of building roofs}},
+title = {{Propagation of positional error in 3D GIS: estimation of the solar irradiation of building roofs}},
 journal = {International Journal of Geographical Information Science},
-year = {2015}
+year = {2015},
+doi = {http://doi.org/10.1080/13658816.2015.1073292}
 }
 ```
 
@@ -321,7 +322,7 @@ Acknowledgments
 References and further reading
 ---------------------
 
-+ [Placeholder for my journal paper (coming soon, I hope)]
++ Biljecki, F., Heuvelink, G. B. M., Ledoux, H., & Stoter, J. (2015). Propagation of positional error in 3D GIS: estimation of the solar irradiation of building roofs. International Journal of Geographical Information Science. http://doi.org/10.1080/13658816.2015.1073292
 + Perez, R. et al., 1990. Modeling daylight availability and irradiance components from direct and global irradiance. Solar Energy, 44(5), pp. 271–289.
 + Hofierka, J. & Zlocha, M., 2012. A New 3-D Solar Radiation Model for 3-D City Models. Transactions in GIS, 16(5), pp. 681–690.
 + Šúri, M. et al., 2007. Potential of solar electricity generation in the European Union member states and candidate countries. Solar Energy, 81(10), pp. 1295–1305.
