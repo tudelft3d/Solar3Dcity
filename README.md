@@ -26,7 +26,7 @@ Conditions for use
 ---------------------
 
 
-This software is free to use. However, you are kindly requested to acknowledge its use by citing it in a research paper you are writing, reports, and/or other applicable materials; and mentioning the [3D Geoinformation group at the Delft University of Technology](http://3d.bk.tudelft.nl/). If you used it for making a nice publication, then you are kindly requested to refer to this paper:
+This software is free to use. You are kindly requested to acknowledge its use by citing it in a research paper you are writing, reports, and/or other applicable materials; and mentioning the [3D Geoinformation group at the Delft University of Technology](http://3d.bk.tudelft.nl/). If you used it for making a nice publication, then you are kindly requested cite this paper:
 
 Biljecki, F., Heuvelink, G. B. M., Ledoux, H., & Stoter, J. (2015). Propagation of positional error in 3D GIS: estimation of the solar irradiation of building roofs. International Journal of Geographical Information Science. DOI: http://doi.org/10.1080/13658816.2015.1073292
 
