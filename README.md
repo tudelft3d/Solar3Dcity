@@ -19,14 +19,14 @@ Despite the popularity of this 3D use-case, there are two drawbacks:
 + the software packages are not available for free, and
 + utilities that support data stored in [CityGML](http://en.wikipedia.org/wiki/CityGML) are seldom.
 
-I have created this utility to fill this gap. This experimental software prototype was developed as a part of my [PhD research](http://3d.bk.tudelft.nl/biljecki/phd.html).
+I have created this utility to fill this gap. This experimental software prototype was developed as a part of my [PhD research](http://filipbiljecki.com/research/phd.html).
 
 
 Conditions for use
 ---------------------
 
 
-This software is free to use. You are kindly requested to acknowledge its use by citing it in a research paper you are writing, reports, and/or other applicable materials; and mentioning the [3D Geoinformation group at the Delft University of Technology](http://3d.bk.tudelft.nl/). If you used it for making a nice publication, then you are kindly requested cite this paper:
+This software is free to use. You are kindly asked to acknowledge its use by citing it in a research paper you are writing, reports, and/or other applicable materials; and mentioning the [3D Geoinformation group at the Delft University of Technology](http://3d.bk.tudelft.nl/). If you used it for making a nice publication, please cite this paper:
 
 Biljecki, F., Heuvelink, G. B. M., Ledoux, H., & Stoter, J. (2015). Propagation of positional error in 3D GIS: estimation of the solar irradiation of building roofs. International Journal of Geographical Information Science, 29(12):2269-2294. DOI: http://doi.org/10.1080/13658816.2015.1073292
 
@@ -44,7 +44,7 @@ doi = {10.1080/13658816.2015.1073292}
 }
 ```
 
-Further, I will be very happy to hear if you find this tool useful for your workflow. If you find it useful and/or have suggestions for its improvement, please let me know. Further, I am maintaining a list of users that I notify of corrections and updates.
+I would be very happy to hear if you find this tool useful in your workflow. If you find it useful and/or have suggestions for its improvement, please let me know. Furthermore, I am maintaining a list of users that I notify of corrections and updates.
 
 
 Estimating the solar irradiation: a quick introduction
@@ -156,7 +156,10 @@ It is important to note the following:
 + The utility supports LOD3 models, for accounting the holes in the roof surfaces.
 + The weather and other data is loaded in the EnergyPlus weather file format (EPW), which is downloaded automatically.
 
+Limitations
+---------------------
 
+* Unfortunately the code does not take shadows into account. This is a notable shortcoming, which has not be implemented because of computational reasons.
 
 Usage and options
 ---------------------
@@ -306,8 +309,6 @@ Filip Biljecki
 
 [3D Geoinformation Research Group](http://3d.bk.tudelft.nl/)
 
-Faculty of Architecture and the Built Environment
-
 Delft University of Technology
 
 email: fbiljecki at gmail dot com
@@ -318,7 +319,7 @@ email: fbiljecki at gmail dot com
 Acknowledgments
 ---------------------
 
-+ This research is supported by the Dutch Technology Foundation STW, which is part of the Netherlands Organisation for Scientific Research (NWO), and which is partly funded by the Ministry of Economic Affairs. (Project code: 11300)
++ This research is supported by the Dutch Technology Foundation STW, which is part of the Netherlands Organisation for Scientific Research (NWO), and which is partly funded by the Ministry of Economic Affairs (project code: 11300).
 
 + [Nathan Charles](https://github.com/nrcharles), the author of the [Solpy](https://github.com/nrcharles/solpy) and [Caelum](https://github.com/nrcharles/caelum) Python libraries, on which this package relies. Nathan promptly answered my questions and gave suggestions. Thank you.
 
@@ -327,7 +328,7 @@ Acknowledgments
 References and further reading
 ---------------------
 
-+ Biljecki, F., Heuvelink, G. B. M., Ledoux, H., & Stoter, J. (2015). Propagation of positional error in 3D GIS: estimation of the solar irradiation of building roofs. International Journal of Geographical Information Science. http://doi.org/10.1080/13658816.2015.1073292
++ Biljecki, F., Heuvelink, G. B. M., Ledoux, H., & Stoter, J. (2015). Propagation of positional error in 3D GIS: estimation of the solar irradiation of building roofs. International Journal of Geographical Information Science, 29(12):2269-2294. [doi:10.1080/13658816.2015.1073292](http://doi.org/10.1080/13658816.2015.1073292)
 + Perez, R. et al., 1990. Modeling daylight availability and irradiance components from direct and global irradiance. Solar Energy, 44(5), pp. 271–289.
 + Hofierka, J. & Zlocha, M., 2012. A New 3-D Solar Radiation Model for 3-D City Models. Transactions in GIS, 16(5), pp. 681–690.
 + Šúri, M. et al., 2007. Potential of solar electricity generation in the European Union member states and candidate countries. Solar Energy, 81(10), pp. 1295–1305.
