@@ -35,6 +35,8 @@ settings = []
 
 place = (52.01, 4.36)
 
+tzoffset = datetime.timedelta(hours=2)
+
 settings.append({'Name' : 'Surface A',
 'Tilt' : 40.0,
 'Azimuth' : 180.0,
@@ -47,7 +49,7 @@ settings.append({'Name' : 'Surface B',
 
 #-- Which days
 #-- month, day format
-epochs = [[3, 1], [7, 19]]
+epochs = [[3, 27], [6, 21]]
 
 #-- Sampling interval
 interval = 5
@@ -110,6 +112,7 @@ import os
 #-- Fix LaTeX for macOS 10.12
 os.environ['PATH'] = os.environ['PATH'] + ':/Library/TeX/texbin'
 import matplotlib as mpl
+mpl.use('TkAgg')
 import matplotlib.pyplot as plt
 plt.rc('text', usetex=True)
 plt.rc('font', family='serif')
@@ -124,8 +127,8 @@ timestamp = []
 total_ir = []
 total_ir_h = []
 
-for v in res['Surface A']['0301']:
-        timestamp.append(v[0])
+for v in res['Surface A']['0327']:
+        timestamp.append(v[0] + tzoffset)
         total_ir.append(v[1])
         total_ir_h.append(v[2])
 
@@ -135,8 +138,8 @@ timestamp = []
 total_ir = []
 total_ir_h = []
 
-for v in res['Surface B']['0301']:
-        timestamp.append(v[0])
+for v in res['Surface B']['0327']:
+        timestamp.append(v[0] + tzoffset)
         total_ir.append(v[1])
         total_ir_h.append(v[2])
 
@@ -148,8 +151,8 @@ timestamp = []
 total_ir = []
 total_ir_h = []
 
-for v in res['Surface A']['0719']:
-        timestamp.append(v[0])
+for v in res['Surface A']['0621']:
+        timestamp.append(v[0] + tzoffset)
         total_ir.append(v[1])
         total_ir_h.append(v[2])
 
@@ -159,8 +162,8 @@ timestamp = []
 total_ir = []
 total_ir_h = []
 
-for v in res['Surface B']['0719']:
-        timestamp.append(v[0])
+for v in res['Surface B']['0621']:
+        timestamp.append(v[0] + tzoffset)
         total_ir.append(v[1])
         total_ir_h.append(v[2])
 
@@ -177,12 +180,13 @@ ax1.xaxis.set_major_formatter(xfmt)
 sns.despine(left=False, bottom=False)
 # ax1.tick_params(axis='x', which='major', bottom='on')
 # ax1.set_xlim([734869.16, 734869.84])
+ax1.set_ylim([0, 1050])
 
 # plt.title('Clear-sky global solar irradiance for Delft, the Netherlands', size=15)
-plt.xlabel('Time (UTC)', size=14)
+plt.xlabel('Local time', size=14)
 #plt.ylabel(u'Total solar irradiation (W/m²)', size=14)
 plt.ylabel(r'Global solar irradiance (W/m$^{2}$)', size=14)
-plt.legend(['A on 1 Mar', 'B on 1 Mar', 'A on 19 Jul', 'B on 19 Jul'], loc='upper center', bbox_to_anchor=(0.5, 1.15), fancybox=1, shadow=0, ncol=4, numpoints=1, prop={'size':12})
+plt.legend(['A on 27 Mar', 'B on 27 Mar', 'A on 21 Jun', 'B on 21 Jun'], loc='upper center', bbox_to_anchor=(0.5, 1.15), fancybox=1, shadow=0, ncol=4, numpoints=1, prop={'size':12})
 plt.savefig('dailyplot.png', bbox_inches='tight', dpi=300)
 plt.savefig('dailyplot.pdf', bbox_inches='tight')
 # plt.show()
