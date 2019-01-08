@@ -3,7 +3,7 @@ Solar3Dcity
 
 A simple experimental utility to estimate the solar potential of building roof surface(s) from a 3D city model stored in CityGML.
 
-![solar3dcity-header](http://3d.bk.tudelft.nl/biljecki/github/solar3dcity/ov-solar-n-legend_cut_smalllogo.png)
+![solar3dcity-header](http://filipbiljecki.com/code/img/ov-solar-n-legend_cut_smalllogo.png)
 
 The scripts compute the solar irradiation data thanks to the [solpy](https://github.com/nrcharles/solpy) library.
 
@@ -76,11 +76,11 @@ The magnitude of the three radiation components is different depending on the da
 
 The solar radiation differs depending on the tilt and orientation of a surface. The plot below show that TOF  (tilt-orientation-factors) for Delft in the Netherlands. It is visible that the difference between the irradiation on differently tilted and oriented surfaces is significant.
 
-![TOF-plot](http://3d.bk.tudelft.nl/biljecki/github/solar3dcity/TOF-plot_new.png)
+![TOF-plot](http://filipbiljecki.com/code/img/TOF-plot_new.png)
 
 You can use Solar3Dcity to compute the optimal tilt for almost every location on Earth:
 
-![TOF-plotNairobi](http://3d.bk.tudelft.nl/biljecki/github/solar3dcity/TOF-nairobi_small.png)
+![TOF-plotNairobi](http://filipbiljecki.com/code/img/TOF-nairobi_small.png)
 
 
 ### Summing it up
@@ -142,7 +142,7 @@ Prerequisites
 Overview of the workflow and advantages
 ---------------------
 
-![solar3dcity-workflow](http://3d.bk.tudelft.nl/biljecki/github/solar3dcity/solar3dcity-workflow.png)
+![solar3dcity-workflow](http://filipbiljecki.com/code/img/solar3dcity-workflow.png)
 
 The utility does the following:
 
@@ -256,7 +256,7 @@ python dailyplot.py
 
 You will get something like this:
 
-![Daily-plot](http://3d.bk.tudelft.nl/biljecki/github/solar3dcity/solar-dailyplot_new.png)
+![Daily-plot](http://filipbiljecki.com/code/img/solar-dailyplot_new.png)
 
 This is the magnitude of the irradiation during the day. Solar3Dcity integrates these values over the year in order to estimate the yearly irradiation.
 
@@ -298,7 +298,7 @@ Visualisation possibilities
 
 This utility just stores the data of the solar estimations directly in the CityGML file. It does not have any GUI. However, data can be visualised by converting this to an enhanced OBJ with my utility [CityGML2OBJs](https://github.com/tudelft3d/CityGML2OBJs). An example is shown in the beginning of this file and here below.
 
-![Zoom-solar](http://3d.bk.tudelft.nl/biljecki/github/solar3dcity/zoom-solar-nw-n-white-legend-small.png)
+![Zoom-solar](http://filipbiljecki.com/code/img/zoom-solar-nw-n-white-legend-small.png)
 
 Check also the [animation](https://vimeo.com/119679847).
 
