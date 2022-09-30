@@ -1,3 +1,10 @@
+
+:warning::warning::warning:
+
+**We do not plan to further develop or fix bugs in this repository. We're focusing all our efforts on [CityJSON](https://www.cityjson.org/) instead, the easy-to-use cousin of CityGML**.
+
+:warning::warning::warning:
+
 Solar3Dcity
 ===========
 
@@ -6,8 +13,6 @@ A simple experimental utility to estimate the solar potential of building roof s
 ![solar3dcity-header](http://filipbiljecki.com/code/img/ov-solar-n-legend_cut_smalllogo.png)
 
 The scripts compute the solar irradiation data thanks to the [solpy](https://github.com/nrcharles/solpy) library.
-
-#### Please note that this is an experimental research software prototype under continuous development.
 
 Introduction
 ---------------------
